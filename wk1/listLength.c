@@ -17,6 +17,11 @@ int listLength(struct node *list) {
 
 // use a for loop
 int listLength(struct node *list) {
-    // TODO
-    return 0;
+    int length = 0;
+
+    for (struct node *curr = list; curr != NULL; curr = curr->next) {
+        length++;
+    }
+
+    return length;
 }

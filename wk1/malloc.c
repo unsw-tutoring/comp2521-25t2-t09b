@@ -30,10 +30,24 @@ int main(void) {
 
     // TODO: malloc a struct student and give them an id, name, and wam
     // hint: use strcpy
+    struct student *s1 = malloc(sizeof(struct student));
+    s1->id = 1;
+    (*s1).id = 1;
+    // s1->name = "Hi";
+    // s1->name[0] = 'A';
+    strcpy(s1->name, "Josh");
 
     // TODO: malloc an array of 10 struct students
+    struct student *array = malloc(10 * sizeof(struct student));
+    array[2].id = 1;
 
     // TODO: malloc an array of 5 pointers to struct students
+    // struct student **a = malloc(5 * sizeof(struct student *));
 
     // TODO: malloc a 2D array of struct students with 5 'rows' and 10 'columns'
+    struct student **a = malloc(5 * sizeof(struct student *));
+    for (int i = 0; i < 5; i++) {
+        a[i] = malloc(10 * sizeof(struct student));
+    }
+    a[2][1].id = 1;
 }
