@@ -1,14 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+/**
+ * READ THE STYLE GUIDE
+ * 1. casing -- PascalCase, camelCase, SHOUTING_CASE
+ * 2. static helper functions + function order
+ * 3. repeated code + helper functions
+ * 4. line width
+ * 5. #defines + constants
+ * 6. commenting
+ */
+
+
 struct Node {
     int data;
     struct Node *next;
 };
 
+/**
+ * frees the linked list
+ */
 void freeList(struct Node *head) {
 	if (head == NULL) {
-	return;
+	    return;
 	}
 	// Frees the list by iterating through the list, using a temporary element and freeing the elements by using free (hopefully this comment is useful and helps out)
 	struct Node *Temp = head;
